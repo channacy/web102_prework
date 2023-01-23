@@ -35,8 +35,7 @@ GIF created with ScreenToGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-Challenges include reviewing DOM concepts relating to appending new created elements to HTML classes. New concepts that had to be reviewed and learned were destructing and the spread operator.
+Challenges include reviewing DOM concepts relating to appending new created elements to HTML classes. New concepts had to be reviewed and those that had to be learned were destructing and the spread operator.
 ## License
 
     Copyright [2023] [Channacy Un]

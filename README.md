@@ -17,7 +17,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] Added color scheme to CSS 
+* [x] Added new color scheme to CSS
+* [x] Change font  
 
 ## Video Walkthrough
 
@@ -38,7 +39,7 @@ Describe any challenges encountered while building the app.
 Challenges include reviewing DOM concepts relating to appending new created elements to HTML classes. New concepts that had to be reviewed and learned were destructing and the spread operator.
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Channacy Un]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

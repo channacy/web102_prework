@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] Added new color scheme to CSS
-* [x] Change font  
+* [x] Changed font  
 
 ## Video Walkthrough
 

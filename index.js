@@ -93,7 +93,7 @@ function filterUnfundedOnly() {
     // use filter() to get a list of games that have not yet met their goal
      // use filter() to get a list of games that have met or exceeded their goal
      const filteredUnfundedGames = GAMES_JSON.filter((game) =>{
-        return game.pledged <= game.goal;
+        return game.pledged < game.goal;
     });
 
     // use the function we previously created to add unfunded games to the DOM
@@ -108,7 +108,7 @@ function filterFundedOnly() {
     deleteChildElements(gamesContainer);
 
     const filteredFundedGames = GAMES_JSON.filter((game) =>{
-        return game.pledged > game.goal;
+        return game.pledged >= game.goal;
     });
 
     addGamesToPage(filteredFundedGames);
@@ -146,16 +146,20 @@ const descriptionContainer = document.getElementById("description-container");
 const filteredUnfundedGames = GAMES_JSON.filter((game) =>{
     return game.pledged <= game.goal;
 });
-numUnfundedGames = filteredUnfundedGames.length;
+const numUnfundedGames = filteredUnfundedGames.length;
 
 // create a string that explains the number of unfunded games using the ternary operator
-const displayStr = `A total of $100.000 has been raised for 4 games. Currently, ${numUnfundedGames} ${numUnfundedGames > 1 ? "game" : "games"} remainds unfunded. We need your help to fund these amazing games!`;
+const displayStr = `A total of $${amountRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${numUnfundedGames} ${numUnfundedGames > 1 ? "game" : "games"} remainds unfunded. We need your help to fund these amazing games!`;
 
 
 // create a new DOM element containing the template string and append it to the description container
 const newParagraph = document.createElement("p");
 newParagraph.innerHTML = displayStr;
 descriptionContainer.append(newParagraph);
+
+
+
+
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 
@@ -167,9 +171,15 @@ const secondGameContainer = document.getElementById("second-game");
 const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
-
+let [first, second, ...other]= sortedGames;
 // use destructuring and the spread operator to grab the first and second games
+//const name, desc, pl, goal, bkrs, img = first;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-
+const firstGame = document.createElement("p");
+firstGame.innerHTML = `${first.name}`;
+firstGameContainer.append(firstGame);
 // do the same for the runner up item
+const secondGame = document.createElement("p");
+secondGame.innerHTML = `${second.name}`;
+secondGameContainer.append(secondGame);

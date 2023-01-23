@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster Home*
 
-Submitted by: **Your Name Here**
+Submitted by: **Channacy Un**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Home** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
@@ -35,7 +35,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+Challenges include reviewing DOM concepts relating to appending new created elements to HTML classes. New concepts that had to be reviewed and learned were destructing and the spread operator.
 ## License
 
     Copyright [yyyy] [name of copyright owner]
